@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #252424;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+section{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card1{
+    padding: 24px;
+    margin: 24px;
+    height: 220px;
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.card1 h2{
+    color: #fff;
+}
+.card1 p{
+    color: #fff;
+
+}
+
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+#InputNum{
+    padding: 12px;
+    width: 150px;
+    border-radius: 10px;
+}
+#InputPercentage{
+    padding: 12px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.resultAndCalc{
+    display: flex;
+    justify-content: space-between;
+}
+.resultAndCalc button{
+    padding: 10px;
+    border: 2px solid rgb(104, 0, 202);
+    border-radius: 10px;
+}
+.resultAndCalc p{
+    padding: 10px;
+}
