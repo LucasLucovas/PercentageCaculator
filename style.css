@@ -8,26 +8,28 @@ body{
 }
 
 .container{
+    display: flex;
     width: 100%;
     height: 100vh;
 }
 
 section{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 50%;
     height: 100%;
 }
 
 .card1{
     padding: 24px;
-    margin: 24px;
-    height: 220px;
-    width: 400px;
+    margin: 54px;
+    height: 320px;
+    width: 500px;
     border: 2px solid white;
     border-radius: 5px;
 }
+
 .card1 h2{
     color: #fff;
 }
@@ -40,7 +42,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 150px;
 }
 #InputNum{
     padding: 12px;
@@ -55,12 +57,23 @@ section{
 
 .resultAndCalc{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100px;
 }
+
 .resultAndCalc button{
     padding: 10px;
-    border: 2px solid rgb(104, 0, 202);
+    border: 2px solid rgb(107, 241, 197);
     border-radius: 10px;
+    position: absolute;
+    right: 0;
+}
+
+#Result{
+    margin-left: -10px;
+    color: rgb(255, 115, 0);
+    padding: 0 20px 0 20px;
 }
 .resultAndCalc p{
     padding: 10px;

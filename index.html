@@ -12,7 +12,13 @@
         <section>
             <div class="card1">
 
-                    <h2>Calcular porcentaje de x numero:</h2>
+                    <h2>Percentage calculator</h2>
+
+                    <select name="" id="SelectCalc">
+                        <option value="0">Select type of calculation</option>
+                        <option value="1">% de un numero</option>
+                        <option value="2">Nro de un total</option>
+                    </select>
 
                     <div class="inputs">
                         <input type="number" id="InputPercentage" min="0" placeholder="%"/>
@@ -21,11 +27,13 @@
 
                     
                     <div class="resultAndCalc">
-                        <p>The result is:</p>
+                        <p>Result:</p>
+                        <p id="Result"></p>
+
                         <button type="button" class="buttonCalc">Calculate</button>
                     </div>
                 </div>
-            </section>
+            </section> 
     </div>
     <script src="/index.js"></script>
 </body>
