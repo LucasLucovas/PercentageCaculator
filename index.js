@@ -26,23 +26,39 @@ function getPercentageWithNum(num,total){
     if (isNaN(calcNumP)) {
         pResult.textContent = "Fill the fields"
     }else{
-        pResult.textContent = calcNumP.toFixed(2);
+        pResult.textContent = calcNumP.toFixed(2) + "%";
     }
     
 }
 
+function getDiscountValue(price,discount){
+    discount = inputPercentage.value 
+    price = inputNumber.value 
+    const percentagePriceWithDiscount = 100 - discount;
+    const priceWithDiscount = (price * percentagePriceWithDiscount) / 100;
+    pResult.textContent = " $" + priceWithDiscount.toFixed(2)
+}
 
 
-const opcionCambiada = () => {
+
+const changedOption = () => {
     if (Select.value == 1){
+        inputPercentage.placeholder = "%"
+        inputNumber.placeholder = "Total"
         button.addEventListener("click", ()=> getPercentage())
     }else if ( Select.value == 2){
+        inputPercentage.placeholder = "Numero"
+        inputNumber.placeholder = "Total"
         button.addEventListener("click",()=> getPercentageWithNum())
+    }else if(Select.value == 3) {
+        inputPercentage.placeholder = "% de descuento"
+        inputNumber.placeholder = "Precio"
+        button.addEventListener("click",()=> getDiscountValue())
     }
 
 };
   
-  Select.addEventListener("change", opcionCambiada);
+Select.addEventListener("change", changedOption);
 
 
 
