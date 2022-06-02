@@ -59,18 +59,26 @@ function getIncreaseValue(increase,price){
 
 const changedOption = () => {
     if (Select.value == 1){
+        inputPercentage.value = ""
+        inputNumber.value = ""
         inputPercentage.placeholder = "%"
         inputNumber.placeholder = "Total"
         button.addEventListener("click", ()=> getPercentage())
     }else if ( Select.value == 2){
+        inputPercentage.value = ""
+        inputNumber.value = ""
         inputPercentage.placeholder = "Numero"
         inputNumber.placeholder = "Total"
         button.addEventListener("click",()=> getPercentageWithNum())
     }else if(Select.value == 3) {
+        inputPercentage.value = ""
+        inputNumber.value = ""
         inputPercentage.placeholder = "% de descuento"
         inputNumber.placeholder = "Precio"
         button.addEventListener("click",()=> getDiscountValue())
     }else if(Select.value == 4) {
+        inputPercentage.value = ""
+        inputNumber.value = ""
         inputPercentage.placeholder = "% de aumento"
         inputNumber.placeholder = "Precio"
         button.addEventListener("click",()=> getIncreaseValue())
