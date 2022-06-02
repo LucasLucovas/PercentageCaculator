@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 body{
-    background-color: #252424;
+    background: rgb(154,113,168);
+    background: linear-gradient(90deg, rgba(154,113,168,1) 19%, rgba(112,86,142,1) 54%, rgba(69,54,104,1) 100%);
 }
 
 .container{
@@ -26,10 +28,13 @@ section{
     margin: 54px;
     height: 420px;
     width: 600px;
-    border: 2px solid white;
+    border: 2px solid rgb(85, 77, 65);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    background: rgb(79, 70, 87);
+    
+
 }
 
 .card1 h2{
@@ -52,13 +57,17 @@ section{
 #InputNum{
     padding: 12px;
     width: 160px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 50px;
+    outline: none;
+    background-color: rgb(231, 211, 211);
 }
 #InputPercentage{
     padding: 12px;
     width: 160px;
-    border-radius: 10px;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(231, 211, 211);
 }
 
 
@@ -71,23 +80,68 @@ section{
 
 .inputs button{
     padding: 10px;
-    border: 2px solid rgb(107, 241, 197);
     border-radius: 10px;
     position: absolute;
     right: 0;
+    font-weight: bold;
+    outline: none;
 }
 
 #SelectCalc{
     padding: 8px;
     width: 224px;
-    margin-top: 50px;
+    margin-top: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    outline: none;
+    border: 2px solid rgb(49, 46, 43);
+    background-color: rgb(160, 146, 146);
 }
+
 
 #Result{
     margin-left: -10px;
-    color: rgb(255, 115, 0);
+    color: rgb(187, 117, 70);
     padding: 0 20px 0 20px;
 }
 .resultAndCalc p{
     padding: 10px;
+}
+
+
+.buttonCalc{
+        border-color: rgb(160, 146, 146);
+        color: rgb(0, 0, 0);
+        box-shadow: 0 0 40px 40px rgb(160, 146, 146)inset, 0 0 0 0 rgb(160, 146, 146);
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+}
+
+
+.buttonCalc:hover {
+        box-shadow: 0 0 10px 0 rgb(242, 245, 102)inset, 0 0 10px 4px rgb(242, 245, 102);
+}
+
+@media screen and (max-width:600px) {
+    .card1{
+        height: 520px;
+        align-items: center;
+    }
+    .inputs{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    .inputs button{
+        position: relative;
+        margin-top: 22px;
+    }
+    #InputPercentage{
+        margin-bottom: 12px;
+    }
+    #InputNum{
+        margin: 0;
+    }
+
 }

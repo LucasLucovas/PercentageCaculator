@@ -10,7 +10,7 @@ function getPercentage(percentage,number){
     number = inputNumber.value;
     const calcPercent = percentage * number / 100;
     if (calcPercent == 0) {
-        pResult.textContent = "Fill the fields"
+        pResult.textContent = "Tienes que llenar los campos vacios."
     } else {
         pResult.textContent = calcPercent.toFixed(2);
     }
@@ -20,11 +20,11 @@ function getPercentage(percentage,number){
 
 
 function getPercentageWithNum(num,total){
-    num = inputPercentage.value;
-    total = inputNumber.value;
+    num = parseFloat(inputPercentage.value);
+    total = parseFloat(inputNumber.value);
     const calcNumP = num * 100 / total
     if (isNaN(calcNumP)) {
-        pResult.textContent = "Fill the fields"
+        pResult.textContent = "Tienes que llenar los campos vacios."
     }else{
         pResult.textContent = calcNumP.toFixed(2) + "%";
     }
@@ -32,11 +32,27 @@ function getPercentageWithNum(num,total){
 }
 
 function getDiscountValue(price,discount){
-    discount = inputPercentage.value 
-    price = inputNumber.value 
+    discount = parseFloat(inputPercentage.value);
+    price = parseFloat(inputNumber.value);
     const percentagePriceWithDiscount = 100 - discount;
     const priceWithDiscount = (price * percentagePriceWithDiscount) / 100;
-    pResult.textContent = " $" + priceWithDiscount.toFixed(2)
+    if (isNaN(priceWithDiscount)){
+        pResult.textContent = "Tienes que llenar los campos vacios."
+    }else{
+        pResult.textContent = " $" + priceWithDiscount.toFixed(2)
+    }
+}
+
+function getIncreaseValue(increase,price){
+    increase = parseFloat(inputPercentage.value) 
+   price = parseFloat(inputNumber.value) 
+    const percentageOfIncrease =  (price * increase) / 100;
+    const priceWithIncrease = percentageOfIncrease + price;
+    if (isNaN(priceWithIncrease)){
+        pResult.textContent = "Tienes que llenar los campos vacios."
+    }else{
+        pResult.textContent = " $" + priceWithIncrease.toFixed(2);
+    }
 }
 
 
@@ -54,6 +70,10 @@ const changedOption = () => {
         inputPercentage.placeholder = "% de descuento"
         inputNumber.placeholder = "Precio"
         button.addEventListener("click",()=> getDiscountValue())
+    }else if(Select.value == 4) {
+        inputPercentage.placeholder = "% de aumento"
+        inputNumber.placeholder = "Precio"
+        button.addEventListener("click",()=> getIncreaseValue())
     }
 
 };
